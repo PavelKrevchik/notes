@@ -1,0 +1,65 @@
+@media screen and (max-width: 1200px) {
+
+   .notes__list {
+      justify-content: space-around;
+   }
+
+   .notes__item {
+      max-width: 349px;
+   }
+
+}
+
+@media screen and (max-width: 768px) {
+   .send__wrapper-button {
+      flex-direction: column;
+   }
+
+   .send__input {
+      max-width: 100%;
+   }
+
+   .notes__item {
+      max-width: 100%;
+   }
+
+}
+
+@media screen and (max-width: 576px) {
+   .header__text {
+      font-size: 12px;
+   }
+
+   .send__input,
+   .send__teaxarea {
+      font-size: 12px;
+   }
+
+   .send__input::placeholder,
+   .send__teaxarea::placeholder {
+      font-size: 12px;
+   }
+
+   .notes__wrapper {
+      text-align: center;
+   }
+
+   .notes__title {
+      font-size: 14px;
+   }
+
+   .notes__text {
+      font-size: 12px;
+   }
+
+   .messages-container {
+      right: 15px;
+      max-width: 330px;
+   }
+
+   .message {
+      font-size: 12px;
+   }
+}
+
+

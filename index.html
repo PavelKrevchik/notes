@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Notes</title>
+   <link rel="stylesheet" href="style/style.css">
+   <link rel="stylesheet" href="style/media.css">
+</head>
+<body>
+   <header class="header">
+      <div class="container">
+         <div class="header__wrapper">
+            <img class="header__img" src="img/notes.png" alt="Иконка">
+            <div id="total" class="header__total">
+               <img src="img/icon/header-icon.svg" alt="иконка">
+               <div class="heager__text-wrapper">
+                  <p class="header__text">Заметки: <span id="quantity">0</span></p>
+                  <p class="header__text">Избранные заметки: <span id="favourites">0</span></p> 
+               </div>
+            </div>
+          </div>
+      </div>
+   </header>
+   <section class="send">
+      <div class="container">
+         <div class="send__wrapper">
+            <form id="form" class="send__form">
+               <div class="send__wrapper-name">
+                  <span class="send__span">Название заметки</span>
+                  <input id="input-title" class="send__input" type="text" placeholder="Напишите название новой заметки...">
+               </div>
+               <div class="send__wrapper-button">
+                  <div class="send__wrapper-description">
+                     <span class="send__span">Описание новой заметки</span>
+                     <textarea id="textarea-text" class="send__teaxarea" placeholder="Напишите описание новой заметки..."></textarea>
+                  </div>
+                  <div class="send__wrapper-choice">
+                     <div class="send__wrapper-radio">
+                        <span class="send__span">Выберите цвет заметки</span>
+                        <ul class="send__list-color">
+                           <li class="send__item-color">
+                              <input class="send-input input-1" checked type="radio" value="#f3db7d" name="color">
+                           </li>
+                           <li class="send__item-color">
+                              <input class="send-input input-2" type="radio" value="#c2f37d" name="color">
+                           </li>
+                           <li class="send__item-color">
+                              <input class="send-input input-3" type="radio" value="#7de1f3" name="color">
+                           </li>
+                           <li class="send__item-color">
+                              <input class="send-input input-4" type="radio" value="#f37d7d" name="color">
+                           </li>
+                           <li class="send__item-color">
+                              <input class="send-input input-5" type="radio" value="#e77df3" name="color">
+                           </li>
+                        </ul>
+                     </div>
+                     <button class="send__btn" type="submit">
+                        <img class="send__btn-img" src="img/icon/plus.svg" alt=""> Добавить заметку
+                     </button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+   <section class="notes">
+      <div class="container">
+         <div id="window" class="notes__window">
+            <p class="notes__test-info">У вас нет еще ни одной заметки<br>Заполните поля выше и создайте свою первую заметку!</p>
+         </div>
+         <div id="content" class="notes__wrapper-block">
+            <div class="notes__wrapper">
+               <label class="notes__label">
+                  <input id="selected-notes" class="notes__input" type="checkbox">
+                  <span class="notes__costom-checkbox"></span>
+                  Показать только избранные заметки 
+               </label>
+            </div>
+            <ul id="list" class="notes__list">
+            </ul>
+         </div> 
+
+         <div id="messages-container" class="messages-container"></div>
+
+      </div>
+   </section>
+   <script src="js/model.js"></script>
+   <script src="js/view.js"></script>
+   <script src="js/controller.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>
