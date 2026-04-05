@@ -20,10 +20,8 @@ const view = {
          const selectedRadio = document.querySelector('input[name="color"]:checked')
          const color =  selectedRadio.value
          const firstColor = document.querySelector('input[name="color"]:first-child')
-         // const addItem = controller.addNotes(title, description, color) // add item теперь никуда не приходит по этому можно оставить просто вызов в контроллер
+
          controller.addNotes(title, description, color)
-         // const window = document.getElementById("window")  эти две строчки соответственно тут тоде не нужны
-         // const content = document.getElementById("content")
          inputTitle.value = ""
          textareaDescription.value = ""
 
@@ -31,13 +29,6 @@ const view = {
             firstColor.checked = true
          }
 
-         // if (addItem) {                            этот блок у тебя вызывается только при ините
-         //    if (model.getLength() !== 0) {         в этом и вся проблема, по этому я его перенес
-         //       window.classList.add("display")     в render и добавил еще одно условие к нему
-         //       content.classList.add("none")       что бы коректно работало 
-         //    }
-         // }
-         
       })
 
       const listHeart = document.getElementById("list");
@@ -83,7 +74,7 @@ const view = {
       let notessHTML = ''
       const filterFavorite = isFavorite ? notess.filter(favorite => favorite.isFavorite) : notess
       const favouritesCount = notess.filter(notes => notes.isFavorite).length
-      const window = document.getElementById("window") // и эти две строчки перенес сюда
+      const window = document.getElementById("window") 
       const content = document.getElementById("content")
 
       for (const notes of filterFavorite) {
@@ -113,10 +104,10 @@ const view = {
       lengthElement.textContent = model.getLength()
       favouritesLength.textContent = favouritesCount
 
-      if (model.getLength() !== 0) {        // новый блок кода тут.
-         window.classList.add("display")    // ошибка в том что класс у тебя присваивался только при ините
-         content.classList.add("none")      // а должен каждый раз в рендере как тут
-      }else {
+      if (model.getLength() !== 0) {        
+         window.classList.add("display")    
+         content.classList.add("none")      
+      } else {
          window.classList.remove("display")
          content.classList.remove("none")
       }
